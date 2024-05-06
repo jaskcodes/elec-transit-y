@@ -3,6 +3,7 @@
 # Status: WIP
 
 import pandas as pd
+import json
 import requests
 import time
 import boto3
@@ -55,12 +56,25 @@ def lambda_handler(event,context):
         stations_df.to_parquet(f"/tmp/{state}_stations.parquet")
         s3.upload_file(f"/tmp/{state}_stations.parquet", bucket_name, f"{folder_name}/{state}_stations.parquet")
         print(f'parquet file uploaded for state {state} to S3')
+        
+        # Define end time
+        end_time = time.time()
+        
+        # Construct a success response
+        return {
+            "statusCode": 200,
+            "body": json.dumps({
+                "message": f"Success! Parquet file uploaded for state {state} to S3",
+                "processingTime": f"{end_time - start_time:.2f} seconds"
+            })
+        }
     except Exception as e:
         print(e)
-        print('Error uploading file to S3')    
-
-    # Define end time
-    end_time = time.time()
-
-    # Print the time taken to process the data upto 2 decimal places
-    print(f"Time taken to get EV data for {state}: {end_time - start_time:.2f} seconds")
+        print('Error uploading file to S3')
+        return {
+            "statusCode": 500,
+            "body": json.dumps({
+                "message": "Failed to upload parquet file to S3",
+                "error": str(e)
+            })
+        }
