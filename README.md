@@ -36,6 +36,8 @@ This work uses New York City’s electric vehicle infrastructure as a case study
 
 Parts of this project are scalable and parts are not. Below we have listed each facet of the project, sorted by which parts are scalable and which are not. 
 
+![Alt text](media/arch_diagram.png)
+
 Ingestion - Scalable: 
 * We used a lambda function and step function to ingest data from the National Renewable Energy Laboratory (NREL) and save it to an S3 bucket. This dataset provided us with the locations, longitude and latitude, of each EV charging station along with some additional information about each charging station. We would be able to ingest an even larger dataset using this code. 
 * We used an API call to the NYC Open Data Portal to retrieve data on NYC taxi zones and saved this data to a S3 bucket as a parquet file. This data contains the shape files for each taxi zone and was used in combination with the location of the EV station location data to determine how many EV stations were located in each taxi zone. 
