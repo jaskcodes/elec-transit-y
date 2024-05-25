@@ -73,8 +73,8 @@ Visualization - Scalable :
 
 ### Running Visualizations
 
-* ![Demo Video](media/taxi_preview.png)](media/change_in_pickups.mov)
-* ![Alt text](media/population_density.png)]
+* ![Demo Video](media/taxi_preview.png)
+* ![Alt text](media/population_density.png)
 
 
 ## Authors
