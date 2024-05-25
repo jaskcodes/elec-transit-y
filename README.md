@@ -75,27 +75,30 @@ Current Deployment Status and Issues:
 elec-transit-y
 ├── README.md
 ├── nyc_app.py
+├── assets
+│   └── styles.css
+├── census
+│   ├── analysis
+│   │   ├── census_viz.ipynb
+│   │   └── pop_raster.ipynb
+│   └── ingestion
+│       └── census_population.ipynb
 ├── data
 │   └── [data files]
+├── ev_nrel
+│   ├── README.md
+│   └── ingestion
+│       ├── lambda
+│       │   ├── lambda_function.py
+│       │   └── lambda_function.py.zip
+│       └── nrel_ingestion.ipynb
 ├── media
 │   └── [media files]
 ├── notebooks
 │   ├── EV_eda.ipynb
+│   ├── NYC_Taxi_EDA.ipynb
 │   ├── README.md
-│   ├── census
-│   │   ├── analysis
-│   │   │   ├── census_viz.ipynb
-│   │   │   └── pop_raster.ipynb
-│   │   └── ingestion
-│   │       └── census_population.ipynb
-│   ├── ev_nrel
-│   │   ├── README.md
-│   │   └── ingestion
-│   │       ├── lambda
-│   │       │   ├── lambda_function.py
-│   │       │   └── lambda_function.py.zip
-│   │       └── nrel_ingestion.ipynb
-│   └── nyc_taxi
+│   ├── Taxi_Zone_EV_Merge.ipynb
 ├── poetry.lock
 ├── pyproject.toml
 └── requirements.txt
