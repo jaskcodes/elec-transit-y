@@ -116,7 +116,7 @@ By analyzing population density, taxi trips as a proxy for traffic and current s
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/elec-transit-y.git
+   git clone git@github.com:jaskcodes/elec-transit-y.git
    cd elec-transit-y
    ```
 
