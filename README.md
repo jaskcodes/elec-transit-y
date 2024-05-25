@@ -56,7 +56,7 @@ Analysis - Scalable:
 
 Analysis - Not Scalable: 
 * We used Pandas to analyze, merge, and aggregate multiple data sets
-* [ESHAN IS ADDING]
+* We used _rasters_ of population, road density across census tracks and mapped it to taxi zones. While we used joblib to parallelize some part of the process, the approach is not entirely scalable. If we were to scale this analysis for multiple years, we would have to use gpu-based cupy and potentially cloud based workflows.  
 
 Visualization - Potentially Scalable: 
 * We used Plotly and Dash to create interactive visualizations for our analysis. These visualizations include scatter plots, bar charts, and maps that aid in understanding the population density, traffic and distribution and density of EV charging stations across NYC.
