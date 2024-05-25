@@ -65,19 +65,6 @@ Visualization - Scalable :
 * We used Plotly and Dash to create interactive visualizations for our analysis. These visualizations include scatter plots, bar charts, and maps that aid in understanding the population density, traffic and distribution and density of EV charging stations across NYC.
 * By deploying our Dash application on AWS Elastic Beanstalk, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
 
-
-## References
-
-* [Evidence from NASA in support of connection between human activity and climate change](https://science.nasa.gov/climate-change/evidence/)
-* [Report on Electric Vehicles from NYC Mayor's Office of Climate and Environmental Justice](https://climate.cityofnewyork.us/subtopics/electric-vehicles/)
-* [flo Web Page on NYC Public Charging](https://www.flo.com/new-york-city/)
-* [Report on Electrifying the For-Hire Transportation Sector in NYC by NYC's Taxi and Limousine Commission](https://www.nyc.gov/assets/tlc/downloads/pdf/Charged_Up!_TLC_Electrification_Report-2022.pdf)
-* [NYC Department of Transportation Web Page on Electric Vehicles](https://www.nyc.gov/html/dot/html/motorist/electric-vehicles.shtml#/find/nearest)
-* [NYC Taxi and Limousine Commission Web Page on where to find EV chargers in NYC](https://www.nyc.gov/site/tlc/about/ev-charging-faq.page#/find/nearest)
-* [Con Edison Web Page on EV Chargers in NYC](https://www.coned.com/en/our-energy-future/our-energy-vision/where-we-are-going/nyc-public-charging)
-
-
-
 ## Getting Started
 
 ### Directory Structure
@@ -118,6 +105,17 @@ elec-transit-y
 * ![Alt text](media/population_density.png)
 
 
+## References
+
+* [Evidence from NASA in support of connection between human activity and climate change](https://science.nasa.gov/climate-change/evidence/)
+* [Report on Electric Vehicles from NYC Mayor's Office of Climate and Environmental Justice](https://climate.cityofnewyork.us/subtopics/electric-vehicles/)
+* [flo Web Page on NYC Public Charging](https://www.flo.com/new-york-city/)
+* [Report on Electrifying the For-Hire Transportation Sector in NYC by NYC's Taxi and Limousine Commission](https://www.nyc.gov/assets/tlc/downloads/pdf/Charged_Up!_TLC_Electrification_Report-2022.pdf)
+* [NYC Department of Transportation Web Page on Electric Vehicles](https://www.nyc.gov/html/dot/html/motorist/electric-vehicles.shtml#/find/nearest)
+* [NYC Taxi and Limousine Commission Web Page on where to find EV chargers in NYC](https://www.nyc.gov/site/tlc/about/ev-charging-faq.page#/find/nearest)
+* [Con Edison Web Page on EV Chargers in NYC](https://www.coned.com/en/our-energy-future/our-energy-vision/where-we-are-going/nyc-public-charging)
+
+  
 ## Authors
 
 Contributors names and contact info
