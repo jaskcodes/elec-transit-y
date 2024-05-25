@@ -25,6 +25,13 @@ Communities need to take a data-driven approach to determining how many EV charg
 
 Our team conducted an analysis of the current distribution of electric vehicle charging stations in New York City. We produced visualizations to examine various factors that could help us determine the best locations for placing additional EV charging stations, such as how the distribution of EV charging stations compares to major thoroughfares, where the NYC population is located, and where NYC for-hire vehicle drivers are likely located. We determined which areas of NYC, defined by taxi zones, would be the best candidates for receiving the EV charging stations that are next installed in New York City. 
 
+
+Certainly! Here is a more concise version in one paragraph:
+
+Through our initial analysis of the EV charging stations data across four states—California, Illinois, New York, and Texas—we observed a significant increase in the number of charging stations over time, with California showing a remarkable growth trajectory that vastly outpaces the other states. This underscores California's commitment to advancing electric vehicle infrastructure. Our focus, however, is on New York City. The visualization below illustrates the evolution of charging stations over time and highlights the urgent need for expanding EV infrastructure in New York. By analyzing population density and existing charging station distribution, we aim to identify gaps and provide insights for optimizing the placement of new charging stations to better serve NYC residents.
+
+![Alt text](media/output.png)
+
 #### Justification of the importance of using scalable computing methods to solve it:
 
 This work uses New York City’s electric vehicle infrastructure as a case study for how electric vehicles can be strategically and equitably expanded. It’s important to use scalable computing methods for this work so that we are able to:
