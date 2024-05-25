@@ -101,7 +101,7 @@ elec-transit-y
 └── requirements.txt
 ```
 
-### Running Visualizations
+### Dashboard
 
 * ![Demo Video](media/taxi_preview.png)
 * ![Alt text](media/population_density.png)
