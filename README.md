@@ -58,9 +58,13 @@ Analysis - Not Scalable:
 * We used Pandas to analyze, merge, and aggregate multiple data sets
 * [ESHAN IS ADDING]
 
-Visualization - Scalable : 
+Visualization - Potentially Scalable: 
 * We used Plotly and Dash to create interactive visualizations for our analysis. These visualizations include scatter plots, bar charts, and maps that aid in understanding the population density, traffic and distribution and density of EV charging stations across NYC.
-* By deploying our Dash application on AWS Elastic Beanstalk, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
+* By deploying our Dash application on AWS Elastic Beanstalk with load balancing, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
+
+
+Current Deployment Status and Issues
+Currently, we are facing issues deploying our Dash application on AWS Elastic Beanstalk due to insufficient permissions for creating the necessary IAM service roles. The specific issue is related to the lack of permissions for iam:CreateRole, which is required to set up the environment correctly.
 
 ## Getting Started
 
