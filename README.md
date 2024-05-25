@@ -106,7 +106,7 @@ elec-transit-y
 
 ### Dashboard
 
-By analyzing population density, taxi trips as a proxy for traffic and current station distribution, we aim to identify gaps and optimize new station placements to better serve NYC residents.
+By analyzing population density, taxi trips as a proxy for traffic and current station distribution through an interactive dashboard, we aim to identify gaps and optimize new station placements to better serve NYC residents.
 
 * ![Demo Video](media/taxi_preview.png)
 * ![Alt text](media/population_density.png)
