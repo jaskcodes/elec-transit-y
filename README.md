@@ -56,8 +56,6 @@ Visualization - Scalable :
 * We used Plotly and Dash to create interactive visualizations for our analysis. These visualizations include scatter plots, bar charts, and maps that aid in understanding the population density, traffic and distribution and density of EV charging stations across NYC.
 * By deploying our Dash application on AWS Elastic Beanstalk, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
 
-[[![Demo Video](media/taxi_preview.png)](media/change_in_pickups.mov)
-
 
 ## References
 
@@ -75,9 +73,8 @@ Visualization - Scalable :
 
 ### Running Visualizations
 
-* [JAS TO ADD HERE]
+* [![Demo Video](media/taxi_preview.png)](media/change_in_pickups.mov)
 
-* ![alt text](images/chicago_initial_map.png)
 
 ## Authors
 
