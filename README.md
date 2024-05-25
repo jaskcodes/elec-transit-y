@@ -56,8 +56,7 @@ Analysis - Scalable:
 
 Analysis - Not Scalable: 
 * We used Pandas to analyze, merge, and aggregate multiple data sets
-* We used _rasters_ of population, road density across census tracks and mapped it to taxi zones. While we used joblib to parallelize some part of the process, the approach is not entirely scalable. If we were to scale this analysis for multiple years, we would have to use gpu-based cupy and potentially cloud based workflows. Details of code and images from this analysis are present in the branch _eshan_ > _census_ > _analysis_ and _images_
-
+* We used _rasters_ of population, road density across census tracks and mapped it to taxi zones. While we used joblib to parallelize some part of the process, the approach is not entirely scalable. If we were to scale this analysis for multiple years, we would have to use gpu-based cupy and potentially cloud based workflows. Details of code and images from this analysis are present in the branch _eshan_ > _census_ > _analysis_ and _eshan_ > _images_
 Visualization - Potentially Scalable: 
 * We used Plotly and Dash to create interactive visualizations for our analysis. These visualizations include scatter plots, bar charts, and maps that aid in understanding the population density, traffic and distribution and density of EV charging stations across NYC.
 * By deploying our Dash application on AWS Elastic Beanstalk with load balancing, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
