@@ -25,7 +25,7 @@ Communities need to take a data-driven approach to determining how many EV charg
 
 Our team conducted an analysis of the current distribution of electric vehicle charging stations in New York City. We produced visualizations to examine various factors that could help us determine the best locations for placing additional EV charging stations, such as how the distribution of EV charging stations compares to major thoroughfares, where the NYC population is located, and where NYC for-hire vehicle drivers are likely located. We determined which areas of NYC, defined by taxi zones, would be the best candidates for receiving the EV charging stations that are next installed in New York City. 
 
-Through our initial analysis of the EV charging stations data across four states—California, Illinois, New York, and Texas—we observed a significant increase in the number of charging stations over time, with California showing a remarkable growth trajectory that vastly outpaces the other states. This underscores California's commitment to advancing electric vehicle infrastructure. Our focus, however, is on New York City. The visualization below illustrates the evolution of charging stations over time and highlights the urgent need for expanding EV infrastructure in New York. By analyzing population density and existing charging station distribution, we aim to identify gaps and provide insights for optimizing the placement of new charging stations to better serve NYC residents.
+Through our analysis of EV charging stations data from before 1990 to 2024 across California, Illinois, New York, and Texas, we observed significant growth between 2019 and 2024, with California leading in expansion. We envision New York City catching up to California's commitment by increasing its charging stations by 2030. The visualization below highlights the evolution of charging stations over time and underscores the urgent need for expanding EV infrastructure in New York. 
 
 ![Alt text](media/output.png)
 
@@ -75,27 +75,30 @@ Current Deployment Status and Issues:
 elec-transit-y
 ├── README.md
 ├── nyc_app.py
+├── assets
+│   └── styles.css
+├── census
+│   ├── analysis
+│   │   ├── census_viz.ipynb
+│   │   └── pop_raster.ipynb
+│   └── ingestion
+│       └── census_population.ipynb
 ├── data
 │   └── [data files]
+├── ev_nrel
+│   ├── README.md
+│   └── ingestion
+│       ├── lambda
+│       │   ├── lambda_function.py
+│       │   └── lambda_function.py.zip
+│       └── nrel_ingestion.ipynb
 ├── media
 │   └── [media files]
 ├── notebooks
 │   ├── EV_eda.ipynb
+│   ├── NYC_Taxi_EDA.ipynb
 │   ├── README.md
-│   ├── census
-│   │   ├── analysis
-│   │   │   ├── census_viz.ipynb
-│   │   │   └── pop_raster.ipynb
-│   │   └── ingestion
-│   │       └── census_population.ipynb
-│   ├── ev_nrel
-│   │   ├── README.md
-│   │   └── ingestion
-│   │       ├── lambda
-│   │       │   ├── lambda_function.py
-│   │       │   └── lambda_function.py.zip
-│   │       └── nrel_ingestion.ipynb
-│   └── nyc_taxi
+│   ├── Taxi_Zone_EV_Merge.ipynb
 ├── poetry.lock
 ├── pyproject.toml
 └── requirements.txt
@@ -103,9 +106,39 @@ elec-transit-y
 
 ### Dashboard
 
+By analyzing population density, taxi trips as a proxy for traffic and current station distribution through an interactive dashboard, we aim to identify gaps and optimize new station placements to better serve NYC residents.
+
 * ![Demo Video](media/taxi_preview.png)
 * ![Alt text](media/population_density.png)
 
+#### Running the App Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-repo/elec-transit-y.git
+   cd elec-transit-y
+   ```
+
+2. **Create and activate a virtual environment (optional but recommended):**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Dash app:**
+   ```bash
+   python nyc_app.py
+   ```
+
+5. **Open your web browser and go to:**
+   ```
+   http://127.0.0.1:8050
+   ```
 
 ## References
 
