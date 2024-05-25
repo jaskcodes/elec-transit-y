@@ -63,8 +63,9 @@ Visualization - Potentially Scalable:
 * By deploying our Dash application on AWS Elastic Beanstalk with load balancing, we can ensure that our visualizations remains responsive and accessible even as the size of the dataset grows or as more users access the application simultaneously.
 
 
-Current Deployment Status and Issues
-Currently, we are facing issues deploying our Dash application on AWS Elastic Beanstalk due to insufficient permissions for creating the necessary IAM service roles. The specific issue is related to the lack of permissions for iam:CreateRole, which is required to set up the environment correctly.
+Current Deployment Status and Issues:
+
+* Currently, we are facing issues deploying our Dash application on AWS Elastic Beanstalk due to insufficient permissions for creating the necessary IAM service roles. The specific issue is related to the lack of permissions for iam:CreateRole, which is required to set up the environment correctly.
 
 ## Getting Started
 
