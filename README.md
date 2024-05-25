@@ -1,4 +1,4 @@
-# Equitable Expansion of Electric Vehicle Charging Stations
+# Expansion of Electric Vehicle Charging Stations
 
 Analysis of electric vehicle (EV) charging station locations in the context of current traffic, road density, and local population.
 
