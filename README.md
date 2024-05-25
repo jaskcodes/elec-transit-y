@@ -111,6 +111,34 @@ By analyzing population density, taxi trips as a proxy for traffic and current s
 * ![Demo Video](media/taxi_preview.png)
 * ![Alt text](media/population_density.png)
 
+#### Running the App Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-repo/elec-transit-y.git
+   cd elec-transit-y
+   ```
+
+2. **Create and activate a virtual environment (optional but recommended):**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Dash app:**
+   ```bash
+   python nyc_app.py
+   ```
+
+5. **Open your web browser and go to:**
+   ```
+   http://127.0.0.1:8050
+   ```
 
 ## References
 
