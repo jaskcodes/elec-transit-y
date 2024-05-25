@@ -4,7 +4,7 @@ Analysis of electric vehicle (EV) charging station locations in the context of c
 
 ## Description
 
-Analysis of electric vehicle (EV) charging station locations in the context of current traffic, road density, and local population. Analysis performed for Big Data And High Performance Computing for Social Scientists course (MACS 30113) course at the University of Chicago
+Analysis of electric vehicle (EV) charging station locations in the context of current traffic, road density, and local population. Analysis performed for Big Data And High Performance Computing for Social Scientists course (MACS 30113) course at the University of Chicago.
 
 ## Datasets Used
 * 2019 New York City Taxi and Limousine Commission (TLC) Trip Record Data from AWS and NYC Open Data (https://registry.opendata.aws/nyc-tlc-trip-records-pds/)
