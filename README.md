@@ -111,7 +111,7 @@ By analyzing population density, taxi trips as a proxy for traffic and current s
 * ![Demo Video](media/taxi_preview.png)
 * ![Alt text](media/population_density.png)
 
-#### Running the App Locally
+### Running the App Locally
 
 1. **Clone the repository:**
    ```bash
