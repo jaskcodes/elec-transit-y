@@ -7,17 +7,18 @@ import os
 import geopandas as gpd
 from shapely.geometry import Polygon
 
+# Set base directory
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the data
-data_path = '/Users/jaskiratkaur/Documents/HPC/elec-transit-y/data/ev_stations_v1.csv'
+data_path = os.path.join(base_dir, 'data', 'ev_stations_v1.csv')
 ev_data = pd.read_csv(data_path, low_memory=False)
 
 # Load NYC Taxi data for pickups and drop-offs
-data_do = pd.read_csv('/Users/jaskiratkaur/Documents/HPC/elec-transit-y/data/nyc_taxi_rides_2019_aggByDOandHour.csv')
-data_pu = pd.read_csv('/Users/jaskiratkaur/Documents/HPC/elec-transit-y/data/nyc_taxi_rides_2019_aggByPUandHour.csv')
+data_do = pd.read_csv(os.path.join(base_dir, 'data', 'nyc_taxi_rides_2019_aggByDOandHour.csv'))
+data_pu = pd.read_csv(os.path.join(base_dir, 'data', 'nyc_taxi_rides_2019_aggByPUandHour.csv'))
 
 # Load taxi zone shapefile
-base_dir = os.getcwd()
 taxi_zone_shapefile_path = os.path.join(base_dir, 'data', 'zone_shape_files', 'taxi_zones.shp')
 taxi_zones_gdf = gpd.read_file(taxi_zone_shapefile_path)
 
@@ -198,10 +199,13 @@ def update_pickup_dropoff_map(data_type, hour):
         data = data.rename(columns={'DOLocationID': 'LocationID'})
     
     ev_map = create_pickup_dropoff_map(data, data_type)
-    ev_map.save('maps/pickup_dropoff_map.html')
+    ev_map.save(os.path.join(base_dir, 'maps', 'pickup_dropoff_map.html'))
 
 # Generate initial maps
-create_population_density_map().save('maps/population_density_map.html')
+if not os.path.exists(os.path.join(base_dir, 'maps')):
+    os.makedirs(os.path.join(base_dir, 'maps'))
+
+create_population_density_map().save(os.path.join(base_dir, 'maps', 'population_density_map.html'))
 update_pickup_dropoff_map('pickup_count', 0)
 
 # Initialize the Dash app
@@ -217,7 +221,7 @@ app.layout = html.Div(className='container', children=[
         html.Div(className='map-container', children=[
             dcc.Tabs([
                 dcc.Tab(label='Population Density', children=[
-                    html.Iframe(id='population-density-map', srcDoc=open('maps/population_density_map.html', 'r').read(), width='100%', height='800', style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto'})
+                    html.Iframe(id='population-density-map', srcDoc=open(os.path.join(base_dir, 'maps', 'population_density_map.html'), 'r').read(), width='100%', height='800', style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto'})
                 ]),
                 dcc.Tab(label='Pickups and Dropoffs', children=[
                     dcc.Dropdown(
@@ -244,7 +248,7 @@ app.layout = html.Div(className='container', children=[
                     ),
                     html.Button('Play', id='play-button', n_clicks=0),
                     html.Button('Pause', id='pause-button', n_clicks=0),
-                    html.Iframe(id='pickup-dropoff-map', srcDoc=open('maps/pickup_dropoff_map.html', 'r').read(), width='100%', height='800', style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto'})
+                    html.Iframe(id='pickup-dropoff-map', srcDoc=open(os.path.join(base_dir, 'maps', 'pickup_dropoff_map.html'), 'r').read(), width='100%', height='800', style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto'})
                 ])
             ])
         ], style={'width': '70%', 'display': 'inline-block', 'vertical-align': 'top'}),
@@ -276,7 +280,7 @@ def update_output(data_type, hour, n_intervals, play_clicks, pause_clicks):
         text_content = "We used NYC Taxi data from 2019 as a proxy for traffic patterns, illustrating the number of trips throughout the day and overlaying EV charging stations to highlight areas of need. Black zones indicate no trips during specific times of the day, with Staten Island having more black zones, possibly due to residents primarily commuting by car and taking a ferry to other parts of NYC. To animate the graph and view trip density throughout the day, click 'Play'. To focus on a specific time of day, click 'Pause'."
     else:
         text_content = "We tried to visualize population density to see whether there are enough stations in densely populated areas or if particular areas have more. Notably, Lower Manhattan seems to have a high number of stations. This could be due to various factors such as higher demand, availability of space, or policy decisions."
-    return hour, open('maps/pickup_dropoff_map.html', 'r').read(), html.P(text_content, style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'height': '100%'})
+    return hour, open(os.path.join(base_dir, 'maps', 'pickup_dropoff_map.html'), 'r').read(), html.P(text_content, style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'height': '100%'})
 
 # Run the app
 if __name__ == '__main__':
