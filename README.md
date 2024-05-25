@@ -15,7 +15,7 @@ Analysis of electric vehicle (EV) charging station locations in the context of c
 
 ## Overview
 
-Description of a social science research problem:
+#### Description of a social science research problem:
 
 Human activity is altering the Earth’s climate. Human activities are increasing the levels of carbon dioxide in the atmosphere, atmospheric gases are trapping the energy from the sun in our atmosphere, and that trapped energy from the sun is warming the planet. The warming of the surface of the earth and our oceans is causing glaciers and snow cover to melt, sea levels to rise, and an increase in the frequency and severity of extreme weather events. It is paramount that humans decrease the amount of carbon dioxide they’re producing in order to, as much as possible, decrease the severity of the effects of climate change globally.
 
@@ -25,13 +25,14 @@ Communities need to take a data-driven approach to determining how many EV charg
 
 Our team conducted an analysis of the current distribution of electric vehicle charging stations in New York City. We produced visualizations to examine various factors that could help us determine the best locations for placing additional EV charging stations, such as how the distribution of EV charging stations compares to major thoroughfares, where the NYC population is located, and where NYC for-hire vehicle drivers are likely located. We determined which areas of NYC, defined by taxi zones, would be the best candidates for receiving the EV charging stations that are next installed in New York City. 
 
-Justification of the importance of using scalable computing methods to solve it:
+#### Justification of the importance of using scalable computing methods to solve it:
+
 This work uses New York City’s electric vehicle infrastructure as a case study for how electric vehicles can be strategically and equitably expanded. It’s important to use scalable computing methods for this work so that we are able to:
 * analyze large datasets, such as the New York City taxi ride data, that we would not be able to analyze large portions of in the absence of scalable computing methods. This dataset is critical in determining the traffic flow in New York City and where it would be most useful to install EV chargers. 
 * efficiently ingest and analyze numerous data sets into our model. Without scalable computing methods we would not have been able to integrate as many disparate data sources into our visualizations and model. 
 * scale this work up to include the entire state of New York, additional states, additional cities the entire United States, and expanding to other countries.
 
-Description of the scalable computing methods we employed in the project: 
+#### Description of the scalable computing methods we employed in the project: 
 
 Parts of this project are scalable and parts are not. Below we have listed each facet of the project, sorted by which parts are scalable and which are not. 
 
